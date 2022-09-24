@@ -2,9 +2,9 @@
 ## Anggota Kelompok D02
 | NRP | Nama | Kontribusi |
 | :---:        |     :---:           | :---: |
-| 5025201082   | Farrel Emerson      |       |
-| 5025201087   | Daniel Hermawan     |       |
-| 5025201003   | Rahmat Faris Akbar  |       |
+| 5025201082   | Farrel Emerson      | 1,2,3     |
+| 5025201087   | Daniel Hermawan     | 4,5,6,7      |
+| 5025201003   | Rahmat Faris Akbar  |   8,9,10    |
 
 ## Soal 1
 Sebutkan web server yang digunakan pada "monta.if.its.ac.id"! 
@@ -15,8 +15,6 @@ Sebutkan web server yang digunakan pada "monta.if.its.ac.id"!
 Display filter ```http.host eq monta.if.its.ac.id``` digunakan untuk menampilkan paket http yang memiliki host ```monta.if.its.ac.id```
 
 ![image](https://user-images.githubusercontent.com/82019030/192073904-3da8684d-31e8-4198-ad1c-d3ac298965a6.png)
-
-* #### Kendala
 
 ## Soal 2
 Ishaq sedang bingung mencari topik ta untuk semester ini , lalu ia datang ke website monta dan menemukan detail topik pada website “monta.if.its.ac.id” , judul TA apa yang dibuka oleh ishaq ?
@@ -36,57 +34,75 @@ Setelah itu dibuka dan kita bisa melihat bahwa Ishaq membuka **Evaluasi unjuk ke
 
 ![image](https://user-images.githubusercontent.com/82019030/192074155-20385a43-aa92-40c7-965a-ddf7e4e5d46a.png)
 
-* #### Kendala
-
-
 ## Soal 3
 Filter sehingga wireshark hanya menampilkan paket yang menuju port 80! 
 ### Jawab
 * #### Filter
-
+`tcp.dstport == 80`
 * #### Penjelasan
+Dengan membuka file soal3-6.pcapng lalu melakukan filter dengan syntax `tcp.dstport == 80` maka akan muncul tampilan seperti di bawah.
 
-* #### Kendala
-
+![image](https://user-images.githubusercontent.com/99629909/192102488-1ddb0b43-d4cf-434a-846f-733b79218875.png)
 
 ## Soal 4
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!
 ### Jawab
 * #### Filter
-
+`tcp.srcport == 21`
 * #### Penjelasan
+Untuk mengambil paket yang hanya berasal dari port 20, dilakukan display filter seperti di bawah:
 
-* #### Kendala
-
+![image](https://user-images.githubusercontent.com/99629909/192102567-e589e18e-c773-415b-9741-1ca1b045bc77.png)
 
 ## Soal 5
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
 ### Jawab
 * #### Filter
-
+`tcp.srcport == 443`
 * #### Penjelasan
+Untuk mengambil paket yang berasal dari port 443, dilakukan display filter seperti di bawah:
 
-* #### Kendala
-
+![image](https://user-images.githubusercontent.com/99629909/192102641-e0731356-f7a9-4266-a798-9a484dddd669.png)
 
 ## Soal 6
 Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id !
 ### Jawab
 * #### Filter
+[cara 1]: `ip.dst == 203.160.128.158`
 
+[cara 2]: `ip.dst ==  lipi.go.id`
 * #### Penjelasan
+[cara 1]
 
-* #### Kendala
+Kita terlebih dahulu mencari alamat ip dari lipi.go.id dengan menggunakan cmd dengan menggunakan perintah tracert yang membuahkan alamat ip 203.160.128.158 . Kemudian kita melakukan filter menggunakan alamat ip tersebut dengan menuliskan `ip.dst == 203.160.128.158`
 
+![image](https://user-images.githubusercontent.com/99629909/192102947-52481842-f000-4b36-9d71-9173f5516cb8.png)
+
+[cara 2]
+
+pertama kita centang semua view
+
+![image](https://user-images.githubusercontent.com/99629909/192102975-75c2281a-c09f-4b07-9760-2af84dbde7a3.png)
+
+lalu kita ketik `ip.dst ==  lipi.go.id` pada display filter
+
+![image](https://user-images.githubusercontent.com/99629909/192102986-038318b3-3de6-4e35-9eb4-a61a560587fd.png)
 
 ## Soal 7
 Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 ### Jawab
 * #### Filter
-
+`ip.src_host eq 192.168.1.31`
 * #### Penjelasan
+Untuk mencari ip kita sendiri kita dapat membuka cmd dan menulis syntax `ipconfig`
 
-* #### Kendala
+![image](https://user-images.githubusercontent.com/99629909/192103024-fe05c8ff-43e9-41df-997b-82ea26238f49.png)
+
+Lalu kita scroll ke wifi untuk mendapatkan ip kita.
+
+![image](https://user-images.githubusercontent.com/99629909/192103072-ece8a58d-58f9-4303-8ea1-8a5812d42e71.png)
+
+Lalu menggunakan wireshark kita menggunakan `ip.src_host eq 192.168.1.31` untuk memfilter paket yang berasal dari ip kita.
 
 
 ## Soal 8
