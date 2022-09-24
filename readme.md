@@ -10,8 +10,11 @@
 Sebutkan web server yang digunakan pada "monta.if.its.ac.id"! 
 ### Jawab
 * #### Filter
-
+```http.host eq monta.if.its.ac.id```
 * #### Penjelasan
+Display filter ```http.host eq monta.if.its.ac.id``` digunakan untuk menampilkan paket http yang memiliki host ```monta.if.its.ac.id```
+
+![image](https://user-images.githubusercontent.com/82019030/192073904-3da8684d-31e8-4198-ad1c-d3ac298965a6.png)
 
 * #### Kendala
 
@@ -19,8 +22,19 @@ Sebutkan web server yang digunakan pada "monta.if.its.ac.id"!
 Ishaq sedang bingung mencari topik ta untuk semester ini , lalu ia datang ke website monta dan menemukan detail topik pada website “monta.if.its.ac.id” , judul TA apa yang dibuka oleh ishaq ?
 ### Jawab
 * #### Filter
-
+```http.host eq monta.if.its.ac.id```
 * #### Penjelasan
+Gunakan filter yang digunakan pada soal 1, lalu export object sebagai http pada paket yang mengandung **detail topik**
+
+![image](https://user-images.githubusercontent.com/82019030/192074082-9b37cf59-0fd9-42f2-8862-ad6c3be53a48.png)
+
+Setelah kita export, kita ganti jenis file tersebut menjadi html dengan menambahkan ```.html``` pada nama file tersebut
+
+![image](https://user-images.githubusercontent.com/82019030/192074113-84682dfb-6a03-433b-a731-bc65bf42356b.png)
+
+Setelah itu dibuka dan kita bisa melihat bahwa Ishaq membuka **Evaluasi unjuk kerja User Space Filesystem (FUSE) oleh WAHYU SUADI**
+
+![image](https://user-images.githubusercontent.com/82019030/192074155-20385a43-aa92-40c7-965a-ddf7e4e5d46a.png)
 
 * #### Kendala
 
