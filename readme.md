@@ -182,6 +182,10 @@ Temukan password rahasia (flag) dari organisasi bawah tanah yang disebutkan di a
 <img width="416" alt="image" src="https://user-images.githubusercontent.com/99629909/192072900-abfeb031-5cc1-43ff-a472-3bccd2b9b188.png">
 Dari percakapan no.8 di atas, kita melakukan pencarian di google tentang siapa nama karakter anime kembar 5. Sehingga didapatkan nama "nakano" sebagai password decrypt.
 
+![image](https://user-images.githubusercontent.com/99629909/192104436-0194143e-21b4-4f2a-928f-f4b6509b8f64.png)
+
+Sehingga kita bisa masukkan password "nakano" pada cmd:
+
 <img width="521" alt="image" src="https://user-images.githubusercontent.com/99629909/192073593-1361866a-cd9a-4f23-9e7f-b325b9e134bc.png">
 
 Setelah itu dapat kita lihat isi dari file flag.txt alias password rahasianya:
